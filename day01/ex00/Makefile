@@ -5,26 +5,31 @@
 #                                                     +:+ +:+         +:+      #
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/05/14 18:16:54 by obeaj             #+#    #+#              #
-#    Updated: 2022/06/22 17:43:50 by obeaj            ###   ########.fr        #
+#    Created: 2022/06/22 16:39:23 by obeaj             #+#    #+#              #
+#    Updated: 2022/06/22 17:18:04 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME	:= zombie
 
-CC = c++
-CFLAGS = -std=c++98 -Wall -Wextra -Werror
-RM = rm -rf
+CC		:= c++
+CFLAGS	:= -std=c++98 -Wall -Wextra -Werror
+RM		:= rm -rf
 
-SRCS =  megaphone.cpp \
+SRCS	:=  Zombie.cpp \
+			main.cpp \
+			newZombie.cpp \
+			randomChump.cpp \
 		
-OBJS  = ${addprefix ./,${SRCS:.cpp=.o}}
+OBJS    := $(SRCS:.cpp=.o)
+INCLUDE := Zombie.hpp
 
-%.o:%.cpp
+$(NAME) : ${OBJS} $(INCLUDE)
+	${CC} ${CFLAGS} ${OBJS} -o $@
+
+%.o: %.cpp %.hpp
 	$(CC) $(CFLAGS) -o $@ -c $<
 
-$(NAME) : ${OBJS}
-	${CC} ${CFLAGS} ${OBJS} -o $@
 
 all : ${NAME}
 
