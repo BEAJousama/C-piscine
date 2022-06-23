@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/22 16:22:51 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/23 12:25:49 by obeaj            ###   ########.fr       */
+/*   Created: 2022/06/23 14:22:18 by obeaj             #+#    #+#             */
+/*   Updated: 2022/06/23 15:02:46 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-int main()
+Weapon()
 {
-    Zombie *z1;
-    int    i = 0;
+}
 
-    z1 = zombieHorde(10, "Foo");
-    while (i < 10)
-    {
-        z1[i].announce();
-        i++;
-    }
-    // i = 0;
-    // while (i < 10)
-    // {
-    //     z1[i].~Zombie();
-    //     i++;
-    // }
-    delete [] z1;
+~Weapon()
+{
+}
+
+Weapon::getType()
+{
+    return (this->type);
+}
+
+Weapon::setType(std::string t)
+{
+   this->type = t;
 }

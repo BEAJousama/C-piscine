@@ -6,7 +6,7 @@
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/14 18:16:54 by obeaj             #+#    #+#              #
-#    Updated: 2022/06/22 17:43:50 by obeaj            ###   ########.fr        #
+#    Updated: 2022/06/23 14:17:08 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,13 +14,12 @@ NAME = megaphone
 
 CC = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
-RM = rm -rf
 
 SRCS =  megaphone.cpp \
 		
 OBJS  = ${addprefix ./,${SRCS:.cpp=.o}}
 
-%.o:%.cpp
+%.o:%.cpp 
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 $(NAME) : ${OBJS}

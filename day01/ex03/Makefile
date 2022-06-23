@@ -5,39 +5,37 @@
 #                                                     +:+ +:+         +:+      #
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/06/22 16:39:23 by obeaj             #+#    #+#              #
-#    Updated: 2022/06/23 14:16:41 by obeaj            ###   ########.fr        #
+#    Created: 2022/06/23 14:22:38 by obeaj             #+#    #+#              #
+#    Updated: 2022/06/23 14:51:10 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:= zombie
+NAME = zombie
 
-CC		:= c++
-CFLAGS	:= -std=c++98 -Wall -Wextra -Werror
+CC = c++
+CC_FLAGS = -Wall -Wextra -Werror -std=c++98
+RM = rm -f
+INCLUD = Zombie.hpp
 
-SRCS	:=  Zombie.cpp \
-			main.cpp \
-			newZombie.cpp \
-			randomChump.cpp \
-		
-OBJS    := $(SRCS:.cpp=.o)
-INCLUDE := Zombie.hpp
+SRCS =  Zombie.cpp \
+		main.cpp \
+		zombieHorde.cpp \
 
-$(NAME) : ${OBJS} 
-	${CC} ${CFLAGS} ${OBJS} -o $@
+OBJS = $(SRCS:.cpp=.o)
 
-%.o: %.cpp $(INCLUDE)
-	$(CC) $(CFLAGS) -o $@ -c $<
+%.o: %.cpp $(INCLUD)
+	$(CC) $(CC_FLAGS) -c $< -o $@
+
+$(NAME): $(OBJS)
+	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
 
-all : ${NAME}
+all: $(NAME)
 
 clean:
-	@rm -f $(OBJS)
-	@echo "[INFO] Objects removed!"
+	$(RM) $(OBJS)
 
 fclean: clean
-	@rm -f $(NAME)
-	@echo "[INFO] $(NAME) removed!"
+	$(RM) $(NAME)
 
 re: fclean all

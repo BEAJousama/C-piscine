@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 15:09:21 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/22 17:53:08 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/23 15:08:13 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ public:
     ~Zombie();
 };
 
-Zombie* zombieHorde( int N, std::string name );
+Zombie*  zombieHorde( int N, std::string name );
 
 #endif

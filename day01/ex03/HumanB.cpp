@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/22 16:22:51 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/23 12:25:49 by obeaj            ###   ########.fr       */
+/*   Created: 2022/06/23 14:22:34 by obeaj             #+#    #+#             */
+/*   Updated: 2022/06/23 15:41:49 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-int main()
+HumanB()
 {
-    Zombie *z1;
-    int    i = 0;
+    
+}
 
-    z1 = zombieHorde(10, "Foo");
-    while (i < 10)
-    {
-        z1[i].announce();
-        i++;
-    }
-    // i = 0;
-    // while (i < 10)
-    // {
-    //     z1[i].~Zombie();
-    //     i++;
-    // }
-    delete [] z1;
+~HumanB()
+{
+    
+}
+
+HumanB::attack()
+{
+    std::cout << this->name << " attacks with their " << this->w->type << std::endl
 }

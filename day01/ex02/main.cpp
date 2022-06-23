@@ -5,29 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/22 16:22:51 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/23 12:25:49 by obeaj            ###   ########.fr       */
+/*   Created: 2022/06/23 13:51:00 by obeaj             #+#    #+#             */
+/*   Updated: 2022/06/23 14:15:18 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+#include <string>
 
 int main()
 {
-    Zombie *z1;
-    int    i = 0;
+    std::string s = "HI THIS IS BRAIN";
+    std::string *stringPTR = &s;
+    std::string &stringREF = s;
 
-    z1 = zombieHorde(10, "Foo");
-    while (i < 10)
-    {
-        z1[i].announce();
-        i++;
-    }
-    // i = 0;
-    // while (i < 10)
-    // {
-    //     z1[i].~Zombie();
-    //     i++;
-    // }
-    delete [] z1;
+    std::cout << &s << std::endl;
+    std::cout << stringPTR << std::endl;
+    std::cout << &stringREF << std::endl;
+    
+    std::cout << s << std::endl;
+    std::cout << *stringPTR << std::endl;
+    std::cout << stringREF << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 00:13:30 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/22 17:48:42 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/23 12:04:44 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Zombie::Zombie()
 Zombie::Zombie(std::string name)
 {
     this->name = name;
-}
+} 
 
 Zombie::~Zombie()
 {

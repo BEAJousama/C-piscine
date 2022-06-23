@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 15:09:21 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/22 16:33:05 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/23 12:04:23 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 # include <iostream>
 # include <string>
 
-class Zombie
+class Zombie  
 {
 private:
     std::string name;
-public:
+public: 
     Zombie();
     Zombie(std::string name);
     void set_name(std::string name){this->name = name;};

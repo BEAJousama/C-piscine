@@ -5,29 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/22 16:22:51 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/23 12:25:49 by obeaj            ###   ########.fr       */
+/*   Created: 2022/06/23 15:53:32 by obeaj             #+#    #+#             */
+/*   Updated: 2022/06/23 15:53:36 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-
 int main()
 {
-    Zombie *z1;
-    int    i = 0;
-
-    z1 = zombieHorde(10, "Foo");
-    while (i < 10)
-    {
-        z1[i].announce();
-        i++;
-    }
-    // i = 0;
-    // while (i < 10)
-    // {
-    //     z1[i].~Zombie();
-    //     i++;
-    // }
-    delete [] z1;
+{
+Weapon club = Weapon("crude spiked club");
+HumanA bob("Bob", club);
+bob.attack();
+club.setType("some other type of club");
+bob.attack();
+}
+{
+Weapon club = Weapon("crude spiked club");
+HumanB jim("Jim");
+jim.setWeapon(club);
+jim.attack();
+club.setType("some other type of club");
+jim.attack();
+}
+return 0;
 }
