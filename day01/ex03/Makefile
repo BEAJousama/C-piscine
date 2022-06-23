@@ -6,20 +6,21 @@
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/23 14:22:38 by obeaj             #+#    #+#              #
-#    Updated: 2022/06/23 14:51:10 by obeaj            ###   ########.fr        #
+#    Updated: 2022/06/23 19:12:13 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = fight
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INCLUD = Zombie.hpp
+INCLUD = Weapon.hpp HumanA.hpp HumanB.hpp
 
-SRCS =  Zombie.cpp \
+SRCS =  Weapon.cpp \
 		main.cpp \
-		zombieHorde.cpp \
+		HumanA.cpp \
+		HumanB.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 

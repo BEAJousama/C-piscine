@@ -1,5 +1,6 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/obeaj/CPP-piscine'
+ 
 make: Leaving directory `/Users/obeaj/CPP-piscine'
  
 make: *** No targets specified and no makefile found.  Stop.

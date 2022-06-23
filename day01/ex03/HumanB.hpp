@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 14:22:14 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/23 15:42:18 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/23 19:31:11 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@ class HumanB
         std::string name;
     public:
         HumanB();
+        HumanB(std::string name);
+        HumanB(std::string name, Weapon w);
         ~HumanB();
+        void setWeapon(Weapon w);
         void attack();
-}
+};
