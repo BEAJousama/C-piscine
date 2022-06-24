@@ -1,39 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/23 14:22:28 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/24 10:33:28 by obeaj            ###   ########.fr       */
+/*   Created: 2022/06/24 10:46:35 by obeaj             #+#    #+#             */
+/*   Updated: 2022/06/24 10:59:55 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-
-HumanA::HumanA()
+int main(int ac, char *av[])
 {
     
-}
-
-HumanA::HumanA(std::string name, Weapon& w)
-{
-    this->name = name;
-    this->w = &w;
-}
-
-HumanA::HumanA(std::string name)
-{
-    this->name = name;
-}
-
-HumanA::~HumanA()
-{
-    
-}
-
-void HumanA::attack()
-{
-    std::cout << this->name << " attacks with their " << this->w->getType() << std::endl;
 }
