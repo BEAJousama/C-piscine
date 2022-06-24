@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:16:38 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/24 21:28:52 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/24 21:46:30 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class Harl
         void error( void );
     public:
         Harl();
-        void (Harl::*hptr)(void);
         void complain(std::string level);
         ~Harl();
 };
