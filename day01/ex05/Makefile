@@ -5,19 +5,20 @@
 #                                                     +:+ +:+         +:+      #
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/06/24 12:17:35 by obeaj             #+#    #+#              #
-#    Updated: 2022/06/24 12:18:13 by obeaj            ###   ########.fr        #
+#    Created: 2022/06/24 21:14:44 by obeaj             #+#    #+#              #
+#    Updated: 2022/06/24 21:15:10 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = sed
+NAME = harl
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INCLUD = sed.h
+INCLUD = harl.hpp
 
 SRCS =	main.cpp \
+		Harl.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
