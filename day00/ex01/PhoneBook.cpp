@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 18:37:28 by obeaj             #+#    #+#             */
-/*   Updated: 2022/05/20 17:05:03 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/25 12:16:21 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,23 @@ PhoneBook::~PhoneBook()
 {
 }
 
+Contact PhoneBook::getcontact(int index)
+{
+    return(contact[index]);
+}
+
 void print(std::string str, char delim)
 {
     int i;
     char s[11];
     
     i = 0;
-    str.copy(s, 9, 0);
-    if(str[10])
+    str.copy(s, 10, 0);
+    if(str.length() > 10)
+    {
         s[9] = '.';
-    s[10] = '\0';
+        s[10] = '\0';
+    }
     std::cout << std::setw(10);
     std::cout << s;
     std::cout << delim;
@@ -76,11 +83,11 @@ void PhoneBook::showcontacts()
     std::cout << "Index";
     std::cout << "|";
     std::cout << std::setw(10);
-    print("FirstName", '|');
+    print("First-Name", '|');
     std::cout << std::setw(10);
-    print("LastName", '|');
+    print("Last-Name", '|');
     std::cout << std::setw(10);
-    print("NickName", '|');
+    print("Nick-Name", '|');
     std::cout << "\n----- ---------- ---------- ----------\n";
     for(int i = 1; i <= 8 ; i++)
     {
@@ -108,3 +115,4 @@ void PhoneBook::showcontacts()
     else
         std::cout << "No contact found !" << std::endl;
 }
+

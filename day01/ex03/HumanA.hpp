@@ -6,11 +6,14 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 14:22:31 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/24 10:32:44 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/25 12:25:16 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#ifndef HUMANA_H
+# define HUMANA_H
+
+# include "Weapon.hpp"
 
 class HumanA
 {
@@ -24,3 +27,6 @@ class HumanA
         ~HumanA();
         void attack();
 };
+
+#endif;
+

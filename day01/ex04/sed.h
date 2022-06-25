@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 12:06:53 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/24 17:04:00 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/25 12:23:30 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <fstream>
 # include <iostream>
 # include <string>
-#include <sstream>
+# include <sstream>
 
 
 #endif

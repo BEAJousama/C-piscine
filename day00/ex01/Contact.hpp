@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 20:30:42 by obeaj             #+#    #+#             */
-/*   Updated: 2022/05/20 15:55:58 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/25 11:52:56 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ private:
 public:
     Contact();
     Contact(t_info info);
-    t_info get_infos(){return this->info;};
-    void set_infos(t_info infos){this->info = infos;};
+    t_info get_infos();
+    void set_infos(t_info infos);
     ~Contact();
 };
 

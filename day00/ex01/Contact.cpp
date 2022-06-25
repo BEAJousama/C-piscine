@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 20:34:31 by obeaj             #+#    #+#             */
-/*   Updated: 2022/05/20 15:55:53 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/25 11:52:41 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Contact::Contact()
 {
 }
+
 Contact::Contact(t_info info)
 {
     this->info.first_name = info.first_name;
@@ -26,4 +27,14 @@ Contact::Contact(t_info info)
 
 Contact::~Contact()
 {
+}
+
+t_info Contact::get_infos()
+{
+    return this->info;
+}
+
+void Contact::set_infos(t_info infos)
+{
+    this->info = infos;
 }
