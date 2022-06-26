@@ -54,6 +54,7 @@
         "utility": "cpp",
         "iomanip": "cpp",
         "fstream": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "__functional_03": "cpp"
     }
 }
