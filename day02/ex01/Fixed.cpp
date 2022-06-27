@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 17:33:56 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/26 22:34:18 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/27 16:50:46 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int Fixed::getRawBits(void) const
     return (this->fixed_p_value);
 }
 
-void Fixed::setRawBits(int raw)
+void Fixed::setRawBits(int const raw)
 {
     this->fixed_p_value = raw;
 }

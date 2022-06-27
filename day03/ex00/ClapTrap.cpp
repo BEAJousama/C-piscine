@@ -1,43 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   clapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/22 00:13:30 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/27 13:05:55 by obeaj            ###   ########.fr       */
+/*   Created: 2022/06/27 20:57:37 by obeaj             #+#    #+#             */
+/*   Updated: 2022/06/27 21:41:08 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "ClapTrap.hpp"
 
-Zombie::Zombie()
+ClapTrap::ClapTrap()
 {
 }
 
-Zombie::Zombie(std::string name)
+ClapTrap::ClapTrap(const Point &obj)
 {
-    this->name = name;
-} 
-
-Zombie::~Zombie()
-{
-    std::cout << this->name << std::endl;
+    *this = obj
 }
 
-void Zombie::announce()
-{
-    std::cout<<this->name + ": BraiiiiiiinnnzzzZ..."<< std::endl;
-}
-
-std::string Zombie::get_name()
-{
-    return this->name;
-}
-
-void Zombie::set_name(std::string name)
+ClapTrap::ClapTrap(std::string name)
 {
     this->name = name;
 }
+
+ClapTrap::~ClapTrap()
+{
+}
+
+ClapTrap& operator=(const ClapTrap  &obj)
+{
+    if (this == &obj)
+        return *this;
+    return *this;
+}
+
 
