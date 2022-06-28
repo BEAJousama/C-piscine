@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 20:57:37 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/28 16:20:16 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/28 16:20:21 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ ClapTrap::ClapTrap(std::string name) : HitPoints(10),EnergyPoints(10),AttackDama
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << this->name << " : Oh now i'm dying! bye ." << std::endl;
+    std::cout << this->name << " : Oh now i'm dying! goodbye everybody !" << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap  &obj)
@@ -50,11 +50,6 @@ void ClapTrap::attack(const std::string& target)
         std::cout << this->name << " : Oh my god, i'm out of hit points, i can't attack anymore!" << std::endl;
         return ;
     }
-    if (EnergyPoints <= 0)
-    {
-        std::cout << this->name << " : Oh my god, i'm out of energy points, i can't attack anymore!" << std::endl;
-        return ;
-    }
     std::cout<< this->name << " : Hey " << target << " I'm gonna beat you, take this Yaaaaaaaaaaaa!" << std::endl;
     this->EnergyPoints--;
 }
@@ -67,7 +62,7 @@ void ClapTrap::takeDamage(unsigned int amount)
         
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    if (EnergyPoints <= 0 || HitPoints <= 0)
+    if (EnergyPoints <= 0)
     {
         std::cout << this->name << " : Oh my dear god i'm so weak, and i can't get repaired, i'm soo fucked up !"<< std::endl;
         return ;

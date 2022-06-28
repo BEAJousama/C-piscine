@@ -6,46 +6,57 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 20:56:43 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/28 15:36:06 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/28 16:39:42 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScarvTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
     ClapTrap anion("Anion");
-    ClapTrap cation("Cation");
+    ScarvTrap french("French");
+    FragTrap frag("Frag");
     
-    anion.attack("Cation");
-    cation.takeDamage(2);
-    cation.beRepaired(1);
-    cation.attack("Anion");
-    anion.takeDamage(7);
+    anion.attack("French");
+    french.takeDamage(0);
+    frag.attack("French");
+    french.takeDamage(30);
+    french.beRepaired(1);
+    french.attack("Anion");
+    anion.takeDamage(20);
     anion.beRepaired(3);
     anion.beRepaired(1);
-    cation.attack("Anion");
-    anion.takeDamage(7);
+    frag.highFivesGuys();
+    french.attack("Anion");
+    anion.takeDamage(20);
     anion.beRepaired(1);
-    cation.attack("Anion");
+    french.attack("Anion");
     anion.takeDamage(2);
     anion.beRepaired(1);
-    anion.attack("Cation");
+    anion.attack("French");
+    french.guardGate();
+    anion.beRepaired(1);
+    anion.beRepaired(1);
+    frag.highFivesGuys();
     anion.beRepaired(1);
     anion.beRepaired(1);
     anion.beRepaired(1);
     anion.beRepaired(1);
-    anion.beRepaired(1);
-    anion.beRepaired(1);
-    anion.attack("Cation");
-    cation.takeDamage(9);
-    cation.attack("Anion");
-    cation.beRepaired(1);
-    cation.beRepaired(1);
-    cation.beRepaired(6);
-    cation.attack("Anion");
+    anion.attack("French");
+    french.takeDamage(9);
+    french.attack("Anion");
+    french.beRepaired(1);
+    frag.highFivesGuys();
+    french.beRepaired(1);
+    french.beRepaired(6);
+    french.attack("Anion");
+    frag.attack("French");
+    french.takeDamage(30);
     anion.takeDamage(8);
-    anion.attack("Cation");
+    anion.attack("French");
     anion.beRepaired(7);
     return 0;
 }

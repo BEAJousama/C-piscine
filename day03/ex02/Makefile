@@ -6,7 +6,7 @@
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/27 21:01:26 by obeaj             #+#    #+#              #
-#    Updated: 2022/06/28 11:49:40 by obeaj            ###   ########.fr        #
+#    Updated: 2022/06/28 16:20:56 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,12 @@ NAME = ClapTrap
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INCLUD = ClapTrap.hpp
+INCLUD = ClapTrap.hpp ScarvTrap.hpp FragTrap.hpp
 
 SRCS =	main.cpp \
 		ClapTrap.cpp \
+		ScarvTrap.cpp \
+		FragTrap.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 
