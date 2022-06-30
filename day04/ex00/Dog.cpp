@@ -1,30 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScarvTrap.hpp                                      :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 12:52:58 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/30 17:20:26 by obeaj            ###   ########.fr       */
+/*   Created: 2022/06/30 23:21:40 by obeaj             #+#    #+#             */
+/*   Updated: 2022/06/30 23:28:46 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCARVTRAP_H
-# define SCARVTRAP_H
-#include "ClapTrap.hpp"
+#include "Dog.hpp"
 
-class ScarvTrap : public virtual ClapTrap
+Dog::Dog():type("Dog")
 {
-    public:
-        ScarvTrap();
-        ScarvTrap(std::string name);
-        ~ScarvTrap();
-        ScarvTrap(const ScarvTrap &obj);
-        ScarvTrap& operator=(const ScarvTrap &obj);
-        void attack(const std::string& target);
-        void guardGate();
-};
+    
+}
 
-#endif
+Dog::Dog(const Dog &obj)
+{
+    *this = obj;
+}
 
+Dog::~Dog()
+{
+    
+}
+
+Dog& Dog::operator=(cons Dog &obj)
+{
+    if (this = &obj)
+        return *this;
+    this->type = obj.type;
+    return *this;
+}
+
+std::string Dog::getType()
+{
+    return this->type;
+}
+
+void makeSound()
+{
+    std::cout<<"Hao Hao"<<std::endl;
+}

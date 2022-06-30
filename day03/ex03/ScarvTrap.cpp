@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 13:23:59 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/28 16:07:34 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/30 22:51:13 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 ScarvTrap::ScarvTrap()
 {
-    std::cout << "ScarvTrap x : Putain ! j'suis né sans nom !"<< std::endl;
 }
 
 ScarvTrap::ScarvTrap(const ScarvTrap &obj)
@@ -22,7 +21,7 @@ ScarvTrap::ScarvTrap(const ScarvTrap &obj)
     *this = obj;
 }
 
-ScarvTrap::ScarvTrap(std::string name)
+ScarvTrap::ScarvTrap(std::string name) : ClapTrap(name)
 {
     std::cout << name << " : Bonjour, je viens d'etre creé! Dieu merci."<< std::endl;
     this->AttackDamage = 20;
@@ -58,8 +57,9 @@ void ScarvTrap::attack(const std::string& target)
         std::cout << this->name << " : Oh mon dieu, j n'ai plus d'energy points  , je ne peux plus attquer!" << std::endl;
         return ;
     }
-    std::cout<< this->name << " : Hey " << target << " je vais t'abattre comme un chien, Yaaaaaaaaaaaa!" << std::endl;
-    this->EnergyPoints--;  
+    std::cout<< this->name << " : Hey " << target << " je vais t'abattre comme un chien avec "<<this->AttackDamage<<" points de damage, Yaaaaaaaaaaaa!" << std::endl;
+    if (this->EnergyPoints)
+        this->EnergyPoints--;  
 }
 
 void ScarvTrap::guardGate()

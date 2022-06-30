@@ -6,7 +6,7 @@
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/27 21:01:26 by obeaj             #+#    #+#              #
-#    Updated: 2022/06/28 16:20:56 by obeaj            ###   ########.fr        #
+#    Updated: 2022/06/30 19:03:17 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ OBJS = $(SRCS:.cpp=.o)
 	$(CC) $(CC_FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CC_FLAGS) $(OBJS) -o $(NAME)
 
 
 all: $(NAME)

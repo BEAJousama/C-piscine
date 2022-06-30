@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 17:33:56 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/27 16:51:06 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/30 19:06:02 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Fixed::Fixed(Fixed &obj)
 Fixed& Fixed::operator=(const Fixed& obj)
 {
     std::cout<<"Copy assignment operator called\n";
-    if (*this != obj)
+    if (this != &obj)
         fixed_p_value = obj.getRawBits();
     return *this;
 }

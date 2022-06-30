@@ -14,7 +14,6 @@
 
 FragTrap::FragTrap()
 {
-    std::cout << "FragTrap x : puta! nací sin nombre !"<< std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &obj)
@@ -22,7 +21,7 @@ FragTrap::FragTrap(const FragTrap &obj)
     *this = obj;
 }
 
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string name) :  ClapTrap(name)
 {
     std::cout << name << " :¡Hola, me acaban de crear! Gracias a Dios."<< std::endl;
     this->AttackDamage = 30;

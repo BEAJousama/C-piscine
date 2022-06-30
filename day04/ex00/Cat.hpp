@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScarvTrap.hpp                                      :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 12:52:58 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/30 17:20:26 by obeaj            ###   ########.fr       */
+/*   Created: 2022/06/30 23:21:23 by obeaj             #+#    #+#             */
+/*   Updated: 2022/06/30 23:27:59 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCARVTRAP_H
-# define SCARVTRAP_H
-#include "ClapTrap.hpp"
+#ifndef CAT_H
+# define CAT_H
+# include "Animal.hpp"
 
-class ScarvTrap : public virtual ClapTrap
+class Cat : public Animal
 {
     public:
-        ScarvTrap();
-        ScarvTrap(std::string name);
-        ~ScarvTrap();
-        ScarvTrap(const ScarvTrap &obj);
-        ScarvTrap& operator=(const ScarvTrap &obj);
-        void attack(const std::string& target);
-        void guardGate();
-};
+        Cat();
+        ~Cat();
+        Cat(const Cat &obj)
+        Cat& operator=(const Cat &obj);
+        std::string getType();
+        void makeSound();
+        
+}
 
 #endif
-

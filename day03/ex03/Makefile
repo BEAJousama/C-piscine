@@ -6,16 +6,16 @@
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/27 21:01:26 by obeaj             #+#    #+#              #
-#    Updated: 2022/06/28 23:29:47 by obeaj            ###   ########.fr        #
+#    Updated: 2022/06/30 22:38:32 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ClapTrap
 
-CC = c++
+CC= c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INCLUD = ClapTrap.hpp ScarvTrap.hpp FragTrap.hpp DiamonTrap.hpp
+INCLUD = ClapTrap.hpp ScarvTrap.hpp FragTrap.hpp DiamondTrap.hpp
 
 SRCS =	main.cpp \
 		ClapTrap.cpp \
@@ -29,7 +29,7 @@ OBJS = $(SRCS:.cpp=.o)
 	$(CC) $(CC_FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CC_FLAGS) $(OBJS) -o $(NAME)
 
 
 all: $(NAME)
