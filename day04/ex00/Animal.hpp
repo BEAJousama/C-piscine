@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 22:53:49 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/30 23:12:14 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/30 23:39:43 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ class Animal
     public:
         Animal();
         ~Animal();
-        Animal(const Animal &obj)
+        Animal(const Animal &obj);
         Animal& operator=(const Animal &obj);
-        
-}
+        void makeSound()const;
+        std::string getType()const;
+};
 
 #endif

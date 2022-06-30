@@ -6,15 +6,15 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 23:21:14 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/30 23:28:59 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/06/30 23:42:37 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat():type("Cat")
+Cat::Cat()
 {
-    
+    this->type = "Cat";
 }
 
 Cat::Cat(const Cat &obj)
@@ -27,9 +27,9 @@ Cat::~Cat()
     
 }
 
-Cat& Cat::operator=(cons Cat &obj)
+Cat& Cat::operator=(const Cat &obj)
 {
-    if (this = &obj)
+    if (this == &obj)
         return *this;
     this->type = obj.type;
     return *this;
