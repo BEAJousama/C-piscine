@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 13:23:59 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/30 12:24:06 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/02 15:08:14 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ScarvTrap::ScarvTrap(const ScarvTrap &obj)
 
 ScarvTrap::ScarvTrap(std::string name)
 {
-    std::cout << name << " : Bonjour, je viens d'etre creé! Dieu merci."<< std::endl;
+    std::cout << name << " [ScarvTrap] : Bonjour, je viens d'etre creé! Dieu merci."<< std::endl;
     this->AttackDamage = 20;
     this->EnergyPoints = 50;
     this->HitPoints = 100;
@@ -33,7 +33,7 @@ ScarvTrap::ScarvTrap(std::string name)
 
 ScarvTrap::~ScarvTrap()
 {
-    std::cout << this->name << " : Oh eeeet je meurt! au revoir !" << std::endl;
+    std::cout << this->name << " [ScarvTrap] : Oh eeeet je meurt! au revoir !" << std::endl;
 }
 
 ScarvTrap& ScarvTrap::operator=(const ScarvTrap  &obj)
@@ -50,20 +50,20 @@ void ScarvTrap::attack(const std::string& target)
 {
     if (this->HitPoints <= 0)
     {
-        std::cout << this->name << " : Oh mon dieu, j n'ai plus de hit points  , je ne peux plus attquer!" << std::endl;
+        std::cout << this->name << " [ScarvTrap] : Oh mon dieu, j n'ai plus de hit points  , je ne peux plus attquer!" << std::endl;
         return ;
     }
     if (this->EnergyPoints <= 0)
     {
-        std::cout << this->name << " : Oh mon dieu, j n'ai plus d'energy points  , je ne peux plus attquer!" << std::endl;
+        std::cout << this->name << " [ScarvTrap] : Oh mon dieu, j n'ai plus d'energy points  , je ne peux plus attquer!" << std::endl;
         return ;
     }
-    std::cout<< this->name << " : Hey " << target << " je vais t'abattre comme un chien avec "<<this->AttackDamage<<" points de damage, Yaaaaaaaaaaaa!" << std::endl;
+    std::cout<< this->name << " [ScarvTrap] : Hey " << target << " je vais t'abattre comme un chien avec "<<this->AttackDamage<<" points de damage, Yaaaaaaaaaaaa!" << std::endl;
     if (this->EnergyPoints)
         this->EnergyPoints--;  
 }
 
 void ScarvTrap::guardGate()
 {
-    std::cout<< this->name <<  " : J'active le Gate Keeper Mode !" << std::endl;
+    std::cout<< this->name <<  " [ScarvTrap] : J'active le Gate Keeper Mode !" << std::endl;
 }

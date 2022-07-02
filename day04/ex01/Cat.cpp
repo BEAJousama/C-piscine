@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 23:21:40 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/02 12:38:13 by obeaj            ###   ########.fr       */
+/*   Created: 2022/06/30 23:21:14 by obeaj             #+#    #+#             */
+/*   Updated: 2022/07/02 14:01:17 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 
-Dog::Dog()
+Cat::Cat()
 {
-    std::cout<<"Dog created !"<<std::endl;
-    this->type = "Dog";
+    std::cout<<"Cat created !"<<std::endl;
+    this->type = "Cat";
+    this->brain = new Brain();
 }
 
-Dog::Dog(const Dog &obj)
+Cat::Cat(const Cat &obj)
 {
     *this = obj;
 }
 
-Dog::~Dog()
+Cat::~Cat()
 {
-    std::cout<<"Dog destructed !"<<std::endl;
+    delete this->brain;
+    std::cout<<"Cat destructed !"<<std::endl;  
 }
 
-Dog& Dog::operator=(const Dog &obj)
+Cat& Cat::operator=(const Cat &obj)
 {
     if (this == &obj)
         return *this;
@@ -36,7 +38,7 @@ Dog& Dog::operator=(const Dog &obj)
     return *this;
 }
 
-void Dog::makeSound() const
+void Cat::makeSound() const
 {
-    std::cout<<"Hao Hao"<<std::endl;
+    std::cout<<"Miao Miao!"<<std::endl;
 }

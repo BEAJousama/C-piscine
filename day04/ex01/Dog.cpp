@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 23:21:40 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/02 12:38:13 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/02 14:01:05 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ Dog::Dog()
 {
     std::cout<<"Dog created !"<<std::endl;
     this->type = "Dog";
+    this->brain = new Brain();
 }
 
 Dog::Dog(const Dog &obj)
@@ -25,6 +26,7 @@ Dog::Dog(const Dog &obj)
 
 Dog::~Dog()
 {
+    delete this->brain;
     std::cout<<"Dog destructed !"<<std::endl;
 }
 

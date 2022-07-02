@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 23:22:19 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/02 12:38:21 by obeaj            ###   ########.fr       */
+/*   Created: 2022/07/01 16:00:41 by obeaj             #+#    #+#             */
+/*   Updated: 2022/07/01 16:03:09 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-# define DOG_H
-#include "Animal.hpp"
+#ifndef BRAIN_H
+# define BRAIN_H
+# include <iostream>
+# include <string>
 
-class Dog : public virtual Animal
+class Brain
 {
+    protected:
+        std::string ideas[100];
     public:
-        Dog();
-        ~Dog();
-        Dog(const Dog &obj);
-        Dog& operator=(const Dog &obj);
-        void makeSound() const;
+        Brain();
+        ~Brain();
+        Brain(const Brain &obj);
+        Brain& operator=(const Brain &obj);
 };
 
 #endif

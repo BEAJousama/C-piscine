@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 22:53:43 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/30 23:40:32 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/01 16:50:47 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Animal::Animal()
 {
-    
+    std::cout<<"Animal created !"<<std::endl;
 }
 
 Animal::Animal(const Animal &obj)
@@ -24,7 +24,7 @@ Animal::Animal(const Animal &obj)
 
 Animal::~Animal()
 {
-    
+    std::cout<<"Animal destructed !"<<std::endl;
 }
 
 Animal& Animal::operator=(const Animal &obj)
@@ -37,7 +37,7 @@ Animal& Animal::operator=(const Animal &obj)
 
 void Animal::makeSound() const
 {
-    
+    std::cout<<"Animal voice"<<std::endl;
 }
 
 std::string Animal::getType() const

@@ -14,6 +14,7 @@
 
 FragTrap::FragTrap()
 {
+    std::cout << "FragTrap x : puta! nací sin nombre !"<< std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &obj)
@@ -21,9 +22,9 @@ FragTrap::FragTrap(const FragTrap &obj)
     *this = obj;
 }
 
-FragTrap::FragTrap(std::string name) :  ClapTrap(name)
+FragTrap::FragTrap(std::string name)
 {
-    std::cout << name << " :¡Hola, me acaban de crear! Gracias a Dios."<< std::endl;
+    std::cout << name << " [FragTrap] :¡Hola, me acaban de crear! Gracias a Dios."<< std::endl;
     this->AttackDamage = 30;
     this->EnergyPoints = 100;
     this->HitPoints = 100;
@@ -32,7 +33,7 @@ FragTrap::FragTrap(std::string name) :  ClapTrap(name)
 
 FragTrap::~FragTrap()
 {
-    std::cout << this->name << " : ¡Ah, y me muero! adiós !" << std::endl;
+    std::cout << this->name << " [FragTrap] : ¡Ah, y me muero! adiós !" << std::endl;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap  &obj)
@@ -64,5 +65,5 @@ void FragTrap::attack(const std::string& target)
 
 void FragTrap::highFivesGuys(void)
 {
-    std::cout<< this->name <<  " : High Fiiiiiive guys!" << std::endl;
+    std::cout<< this->name <<  " [FragTrap] : High Fiiiiiive guys!" << std::endl;
 }

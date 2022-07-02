@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 23:22:19 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/02 12:38:21 by obeaj            ###   ########.fr       */
+/*   Created: 2022/07/01 16:00:44 by obeaj             #+#    #+#             */
+/*   Updated: 2022/07/02 13:02:30 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-# define DOG_H
-#include "Animal.hpp"
+#include "Brain.hpp"
 
-class Dog : public virtual Animal
+Brain::Brain()
 {
-    public:
-        Dog();
-        ~Dog();
-        Dog(const Dog &obj);
-        Dog& operator=(const Dog &obj);
-        void makeSound() const;
-};
+    std::cout<<"Brain created !"<<std::endl;
+}
 
-#endif
+Brain::Brain(const Brain &obj)
+{
+    *this = obj;
+}
+
+Brain::~Brain()
+{
+    std::cout<<"Brain destructed !"<<std::endl;
+}
+
+Brain& Brain::operator=(const Brain &obj)
+{
+    if (this == &obj)
+        return *this;
+    for (int i = 0; i < 100; i++)
+        this->ideas[i] = obj.ideas[i];
+    return *this;
+}

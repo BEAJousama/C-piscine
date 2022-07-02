@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 23:21:40 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/02 12:38:13 by obeaj            ###   ########.fr       */
+/*   Created: 2022/07/01 14:44:49 by obeaj             #+#    #+#             */
+/*   Updated: 2022/07/02 12:40:57 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog()
+WrongCat::WrongCat()
 {
-    std::cout<<"Dog created !"<<std::endl;
-    this->type = "Dog";
+    std::cout<<"WrongCat created !"<<std::endl;
+    this->type = "WrongCat";
 }
 
-Dog::Dog(const Dog &obj)
+WrongCat::WrongCat(const WrongCat &obj)
 {
     *this = obj;
 }
 
-Dog::~Dog()
+WrongCat::~WrongCat()
 {
-    std::cout<<"Dog destructed !"<<std::endl;
+    std::cout<<"WrongCat destructed !"<<std::endl;
 }
 
-Dog& Dog::operator=(const Dog &obj)
+WrongCat& WrongCat::operator=(const WrongCat &obj)
 {
     if (this == &obj)
         return *this;
@@ -36,7 +36,7 @@ Dog& Dog::operator=(const Dog &obj)
     return *this;
 }
 
-void Dog::makeSound() const
+void WrongCat::makeSound() const
 {
-    std::cout<<"Hao Hao"<<std::endl;
+    std::cout<<"Maouuu Maouuu!"<<std::endl;
 }

@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 23:21:40 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/02 12:38:13 by obeaj            ###   ########.fr       */
+/*   Created: 2022/07/01 14:43:51 by obeaj             #+#    #+#             */
+/*   Updated: 2022/07/02 12:30:57 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongAnimal.hpp"
 
-Dog::Dog()
+WrongAnimal::WrongAnimal()
 {
-    std::cout<<"Dog created !"<<std::endl;
-    this->type = "Dog";
+    std::cout<<"WrongAnimal created !"<<std::endl;
 }
 
-Dog::Dog(const Dog &obj)
+WrongAnimal::WrongAnimal(const WrongAnimal &obj)
 {
     *this = obj;
 }
 
-Dog::~Dog()
+WrongAnimal::~WrongAnimal()
 {
-    std::cout<<"Dog destructed !"<<std::endl;
+    std::cout<<"WrongAnimal destructed !"<<std::endl;
 }
 
-Dog& Dog::operator=(const Dog &obj)
+WrongAnimal& WrongAnimal::operator=(const WrongAnimal &obj)
 {
     if (this == &obj)
         return *this;
@@ -36,7 +35,12 @@ Dog& Dog::operator=(const Dog &obj)
     return *this;
 }
 
-void Dog::makeSound() const
+void WrongAnimal::makeSound() const
 {
-    std::cout<<"Hao Hao"<<std::endl;
+    std::cout<<"WrongAnimal voice"<<std::endl;
+}
+
+std::string WrongAnimal::getType() const
+{
+    return this->type;
 }
