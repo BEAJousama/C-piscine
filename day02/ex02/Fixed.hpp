@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 17:33:47 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/27 16:11:54 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/19 16:37:24 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,5 @@ class Fixed
         int toInt( void ) const;
 
 };
-
 std::ostream& operator<<(std::ostream& os, const Fixed& obj);
-
 #endif
