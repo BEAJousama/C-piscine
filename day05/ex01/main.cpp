@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 12:05:17 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/20 12:05:18 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/26 19:26:35 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,11 @@ int main()
 {
     try
     {
-        Bureaucrat a("test1", 115);
+        Bureaucrat a("test1", 10);
         Bureaucrat c = a;
+        Form form("F1", 50, 116);
+        form.beSigned(c);
+        c.signForm(form);
         std::cout << c;
         a.GradeDecrement();
         std::cout << a;

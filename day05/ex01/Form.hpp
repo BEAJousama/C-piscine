@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 12:05:14 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/20 12:22:19 by obeaj            ###   ########.fr       */
+/*   Created: 2022/07/26 16:10:58 by obeaj             #+#    #+#             */
+/*   Updated: 2022/07/26 19:23:24 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_H
-#define BUREAUCRAT_H
-# include <string>
-# include <iostream>
-# include <stdexcept>
+#ifndef FORM_HPP
+# define FORM_HPP
 
-class Bureaucrat
+# include "Bureaucrat.hpp"
+
+class Bureaucrat;
+
+class Form
 {
-    private:
-        std::string name;
-        int grade;
-    public:
+	
+	public:
         class GradeTooHighException : public std::exception
         {
             public:
                 virtual const char* what() const throw()
                 {
-                    return("Grade is less than 1 !");
+                    return("Grade too high !");
                 }
         };
         class GradeTooLowException : public std::exception
@@ -35,19 +34,29 @@ class Bureaucrat
             public:
                 virtual const char* what() const throw()
                 {
-                    return("Grade is more than 150 !");
+                    return("Grade too low !");
                 }
         };
-        Bureaucrat();
-        ~Bureaucrat();
-        Bureaucrat(std::string name , int grade);
-        Bureaucrat(const Bureaucrat &obj);
-        Bureaucrat& operator=(const Bureaucrat &obj);
-        
-        std::string getName() const;
-        int         getGrade();
-        void        GradeIncrement();
-        void        GradeDecrement();
+		Form();
+		Form( Form const & src );
+		~Form();
+		Form(std::string name, int gradToSign, int gradToExec);
+		std::string getName() const;
+		int getGradeToSign() const;
+		int getGradeToExec() const;
+		bool isItSigned() const;
+		void setTosigned(bool isSigned);
+		void beSigned(Bureaucrat &b);
+		Form &		operator=( Form const & rhs );
+
+	private:
+		const std::string name;
+		const int	 gradToSign;
+		const int	 gradToExec;
+		bool isSigned;
+
 };
-std::ostream& operator<<(std::ostream& os, Bureaucrat& obj);
-#endif
+
+std::ostream &			operator<<( std::ostream & o, Form const & i );
+
+#endif /* ************************************************************ FORM_H */

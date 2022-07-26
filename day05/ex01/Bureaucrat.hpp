@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 12:05:14 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/20 12:22:19 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/26 19:07:57 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 # include <string>
 # include <iostream>
 # include <stdexcept>
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -48,6 +51,7 @@ class Bureaucrat
         int         getGrade();
         void        GradeIncrement();
         void        GradeDecrement();
+        void        signForm(Form &f);
 };
 std::ostream& operator<<(std::ostream& os, Bureaucrat& obj);
 #endif
