@@ -1,0 +1,82 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/27 12:46:43 by obeaj             #+#    #+#             */
+/*   Updated: 2022/07/28 17:45:31 by obeaj            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "RobotomyRequestForm.hpp"
+
+/*
+** ------------------------------- CONSTRUCTOR --------------------------------
+*/
+
+RobotomyRequestForm::RobotomyRequestForm():
+target("default"),
+gradToSign(72),
+gradToExec(45),
+isSigned(false)
+{
+}
+
+RobotomyRequestForm::RobotomyRequestForm(std::string target):
+target(target),
+gradToSign(72),
+gradToExec(45),
+isSigned(false)
+{
+}
+
+RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm & src ):
+target(src.target),
+gradToSign(src.gradToSign),
+gradToExec(src.gradToExec),
+isSigned(false)
+{
+}
+
+
+/*
+** -------------------------------- DESTRUCTOR --------------------------------
+*/
+
+RobotomyRequestForm::~RobotomyRequestForm()
+{
+}
+
+
+/*
+** --------------------------------- OVERLOAD ---------------------------------
+*/
+
+RobotomyRequestForm &				RobotomyRequestForm::operator=( RobotomyRequestForm const & rhs )
+{
+	if (this == &rhs)
+		return *this;
+	this->isSigned = rhs.isItSigned();
+	return *this;
+}
+
+std::ostream &			operator<<( std::ostream & o, RobotomyRequestForm const & i )
+{
+	//o << "Value = " << i.getValue();
+	return o;
+}
+
+
+/*
+** --------------------------------- METHODS ----------------------------------
+*/
+
+
+/*
+** --------------------------------- ACCESSOR ---------------------------------
+*/
+
+
+/* ************************************************************************** */
