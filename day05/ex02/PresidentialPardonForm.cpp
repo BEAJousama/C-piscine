@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 12:46:32 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/28 17:44:17 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/29 15:07:58 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 */
 
 PresidentialPardonForm::PresidentialPardonForm() :
+name("Presedential")
 target("default"),
 gradToSign(25),
 gradToExec(5),
@@ -30,6 +31,7 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target) : target(targ
 }
 
 PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm & src ):
+name(src.name);
 target(src.target),
 gradToSign(src.gradToSign),
 gradToExec(src.gradToExec),
@@ -56,6 +58,7 @@ PresidentialPardonForm &				PresidentialPardonForm::operator=( PresidentialPardo
 	if (this == &rhs)
 		return *this;
 	this->isSigned = rhs.isItSigned();
+	this->target = rhs.target;
 	return *this;
 }
 
