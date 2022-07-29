@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 12:44:23 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/28 17:42:49 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/29 12:32:54 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,7 @@ class ShrubberyCreationForm : public Form
 		
 		// Operators
 		ShrubberyCreationForm & operator=(const ShrubberyCreationForm &assign);
-	
-	private:
-		std::string target;
+		void action() const ;
 };
 
 #endif

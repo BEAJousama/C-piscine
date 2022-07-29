@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 16:10:55 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/27 12:14:46 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/29 13:35:26 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,25 @@ void Form::beSigned(Bureaucrat &b)
 	if (b.getGrade() >= this->getGradeToSign())
 		throw GradeTooLowException();
 	setTosigned(true);
+}
+
+void execute(Bureaucrat const & executor) const 
+{
+	if (!this->isItSigned())
+		throw FormNotSignedException();
+	if(executer.getGrade() >= this->getGradeToExecute())
+		throw GradeTooLowException();
+	action();
+}
+
+std::string Form::getTarget()
+{
+	return (this->target);
+}
+
+void 		Form::setTarget(std::string target)
+{
+	this->target = target;
 }
 
 /*

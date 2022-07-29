@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 12:46:38 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/28 17:42:15 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/29 12:33:11 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,8 @@ class PresidentialPardonForm : public Form
 		~PresidentialPardonForm();
 
 		PresidentialPardonForm &		operator=( PresidentialPardonForm const & rhs );
+		void action() const ;
 
-	private:
-		std::string target;
 
 };
 

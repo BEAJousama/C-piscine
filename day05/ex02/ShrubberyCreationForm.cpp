@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 12:44:20 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/28 17:45:18 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/29 14:27:03 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,22 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator=(const ShrubberyCreation
 
 // Methods
 
+void ShrubberyCreationForm::action() const
+{
+	std::fstream fout;
+	fout.open(this->getTarget() + "_shrubbery", std::ios::out);
+    fout<<"                               # #### ####" 				<< "\n";
+    fout<<"	                           ### \/#|### |/####" 			<< "\n";
+    fout<<"                           ##\/#/ \||/##/_/##/_#" 		<< "\n";
+    fout<<"                         ###  \/###|/ \/ # ###";
+    fout<<"                       ##_\_#\_\## | #/###_/_####\n";
+    fout<<"                      ## #### # \ #| /  #### ##/##\n";
+    fout<<"                       __#_--###`  |{,###---###-~\n";
+    fout<<"                                 \ }{				\n";
+    fout<<"                                  }}{				\n";
+    fout<<"                                  }}{				\n";
+    fout<<"                             ejm  {{}				\n";
+    fout<<"                            , -=-~{ .-^- _			\n";
+    fout<<"                                  `}				\n";
+    fout<<"                                   {				\n";
+}

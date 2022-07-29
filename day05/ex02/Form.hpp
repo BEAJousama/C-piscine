@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 16:10:58 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/28 17:49:22 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/29 12:40:31 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,14 @@ class Form
                     return("Grade too low !");
                 }
         };
+		class FormNotSignedException : public std::exception
+		{
+			public:
+				virtual const char* what() const throw()
+				{
+					return("Form not signed !");
+				}
+		}
 		Form();
 		Form( Form const & src );
 		~Form();
@@ -48,14 +56,17 @@ class Form
 		void setTosigned(bool isSigned);
 		void beSigned(Bureaucrat &b);
 		Form &		operator=( Form const & rhs );
+		std::string getTarget();
+		void 		setTarget(std::string target);
 		void execute(Bureaucrat const & executor) const ;
 		virtual void action() const = 0;
 
 	private:
-		const std::string name;
-		const int	 gradToSign;
-		const int	 gradToExec;
-		bool isSigned;
+		std::string 		target;
+		const std::string 	name;
+		const int	 		gradToSign;
+		const int			gradToExec;
+		bool 				isSigned;
 
 };
 

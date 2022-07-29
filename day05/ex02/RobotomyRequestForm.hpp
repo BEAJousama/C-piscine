@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 12:46:47 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/28 17:42:34 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/29 12:33:03 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ class RobotomyRequestForm : public Form
 		~RobotomyRequestForm();
 
 		RobotomyRequestForm &		operator=( RobotomyRequestForm const & rhs );
-
-	private:
-		std::string target;
+		void action() const ;
 
 };
 
