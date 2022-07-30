@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 12:46:32 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/29 15:07:58 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/30 11:47:21 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target) : target(targ
 }
 
 PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm & src ):
-name(src.name);
-target(src.target),
+name(src.getName());
+target(src.getTarget()),
 gradToSign(src.gradToSign),
 gradToExec(src.gradToExec),
 isSigned(false)
@@ -58,25 +58,17 @@ PresidentialPardonForm &				PresidentialPardonForm::operator=( PresidentialPardo
 	if (this == &rhs)
 		return *this;
 	this->isSigned = rhs.isItSigned();
-	this->target = rhs.target;
+	this->target = rhs.getTarget();
 	return *this;
 }
-
-std::ostream &			operator<<( std::ostream & o, PresidentialPardonForm const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
-
 
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
 
-
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
-
+void	PresidentialPardonForm::Action() const
+{
+	std::cout << this->getTarget() << " has been officially pardoned by Zafod Beeblebrox" << std::endl;
+}
 
 /* ************************************************************************** */

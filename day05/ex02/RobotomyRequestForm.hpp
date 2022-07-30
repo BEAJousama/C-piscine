@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 12:46:47 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/29 12:33:03 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/07/30 11:33:58 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ class RobotomyRequestForm : public Form
 		RobotomyRequestForm();
 		RobotomyRequestForm( RobotomyRequestForm const & src );
 		~RobotomyRequestForm();
-
 		RobotomyRequestForm &		operator=( RobotomyRequestForm const & rhs );
 		void action() const ;
 
@@ -34,4 +33,4 @@ class RobotomyRequestForm : public Form
 
 std::ostream &			operator<<( std::ostream & o, RobotomyRequestForm const & i );
 
-#endif /* ********************************************* ROBOTOMYREQUESTFORM_H */
+#endif
