@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 12:44:20 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/01 14:28:03 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/01 15:41:21 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 // Constructors
 ShrubberyCreationForm::ShrubberyCreationForm():
-Form("Presedential Pardon", 145, 137)
+Form("Shrubbery Creation", 145, 137)
 {
     	this->target = "Default target";
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target):
-Form("Presedential Pardon", 145, 137)
+Form("Shrubbery Creation", 145, 137)
 {
     this->target = target;
 }

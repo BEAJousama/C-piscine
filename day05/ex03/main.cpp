@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 12:05:17 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/01 15:01:49 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/01 17:35:54 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,21 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
     try
     {
         Bureaucrat a("bureaucrat_1", 3);
+        
         Bureaucrat c = a;
-        PresidentialPardonForm p1("target1");
-        p1.beSigned(a);
-        a.signForm(p1);
-        p1.execute(a);
+        Intern someRandomIntern;
+        Form* rrf;
+        rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+        rrf->beSigned(a);
+        a.signForm(*rrf);
+        rrf->execute(a);
     }
     catch (std::exception& e)
     {

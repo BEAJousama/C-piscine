@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 12:46:32 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/01 13:59:38 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/01 15:41:44 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-PresidentialPardonForm::PresidentialPardonForm() : Form("Presedential pardon",25,5)
+PresidentialPardonForm::PresidentialPardonForm() : Form("Presedential Pardon",25,5)
 {
 	this->target = "Default target";
 }
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("Presedential pardon",25,5)
+PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("Presedential Pardon",25,5)
 {
 	this->target = target;
 }
