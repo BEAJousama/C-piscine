@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 12:05:17 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/01 17:35:54 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/02 13:21:57 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@ int main()
     try
     {
         Bureaucrat a("bureaucrat_1", 3);
-        
         Bureaucrat c = a;
         Intern someRandomIntern;
         Form* rrf;
         rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+        if (!rrf)
+            return 0 ;
         rrf->beSigned(a);
         a.signForm(*rrf);
         rrf->execute(a);

@@ -40,29 +40,29 @@ Intern &				Intern::operator=( Intern const & rhs )
 ** --------------------------------- METHODS ----------------------------------
 */
 
-Form& Intern::makePresedentialPardonForm(std::string target)
+Form* Intern::makePresedentialPardonForm(std::string target)
 {   
     PresidentialPardonForm *f = new PresidentialPardonForm(target);
-    return(*f);
+    return f;
 }
 
-Form& Intern::makeRobotomyRequestForm(std::string target)
+Form* Intern::makeRobotomyRequestForm(std::string target)
 {
     RobotomyRequestForm *r = new RobotomyRequestForm(target);
-    return(*r);
+    return(r);
 }
 
-Form& Intern::makeShrubberyCreationForm(std::string target)
+Form* Intern::makeShrubberyCreationForm(std::string target)
 {
     ShrubberyCreationForm *s = new ShrubberyCreationForm(target);
-    return (*s);
+    return (s);
 }
+
+typedef Form* (Intern::*MFORM)(std::string target);
 
 Form* Intern::makeForm(std::string name, std::string target)
 {
 	int i = 0;
-    typedef Form& (Intern::*MFORM)(std::string);
-    PresidentialPardonForm *f = new PresidentialPardonForm();
     MFORM form[3] = {
         &Intern::makePresedentialPardonForm,
         &Intern::makeRobotomyRequestForm,
@@ -73,16 +73,17 @@ Form* Intern::makeForm(std::string name, std::string target)
             "Robotomy Request",
             "Shrubbery Creation"
     };
-    while (i-- < 3)
+    while (i < 3)
     {
         if(name == names[i])
         {
-            std::cout <<"Intern creates "<< name << std::endl;
-            return (&(this->*(form[i]))(target));
+            std::cout <<"Intern successfuly creates "<< name << std::endl;
+            return ((this->*(form[i]))(target));
         }
+        i++;
     }
-    std::cout << "Error: " << name << "doesn't exist" << std::endl;
-    return(f);
+    std::cout << "Error: " << name << " doesn't exist" << std::endl;
+    return(NULL);
 }
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
