@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 23:21:40 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/02 14:01:05 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/08 18:11:00 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Dog::Dog()
 
 Dog::Dog(const Dog &obj)
 {
+    this->brain = nullptr;
     *this = obj;
 }
 
@@ -34,6 +35,11 @@ Dog& Dog::operator=(const Dog &obj)
 {
     if (this == &obj)
         return *this;
+    delete brain;
+    if (obj.brain)
+        this->brain = new Brain();
+    else
+        this->brain = nullptr;    
     this->type = obj.type;
     return *this;
 }

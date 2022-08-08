@@ -39,6 +39,7 @@ int main()
     const WrongAnimal* wrong = new WrongAnimal();
     const Animal* j = new Dog();
     const Animal* i = new Cat();
+    j->
     const WrongAnimal* k = new WrongCat();
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;

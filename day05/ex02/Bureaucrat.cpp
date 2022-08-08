@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 12:05:10 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/01 14:54:58 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/08 18:40:21 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,16 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat &obj)
     this->name = obj.name;
     this->grade = obj.grade;
     return *this;
+}
+
+const char* Bureaucrat::GradeTooHighException::what() const throw()
+{
+    return("Grade is less than 1 !");
+}
+
+const char* Bureaucrat::GradeTooLowException::what() const throw()
+{
+    return("Grade is more than 150 !");
 }
 
 std::string Bureaucrat::getName() const

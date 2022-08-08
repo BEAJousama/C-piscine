@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 23:21:14 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/02 14:01:17 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/08 18:12:43 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Cat::Cat()
 
 Cat::Cat(const Cat &obj)
 {
+    this->brain = nullptr;
     *this = obj;
 }
 
@@ -34,6 +35,11 @@ Cat& Cat::operator=(const Cat &obj)
 {
     if (this == &obj)
         return *this;
+    delete brain;
+    if (obj.brain)
+        this->brain = new Brain();
+    else
+        this->brain = nullptr;    
     this->type = obj.type;
     return *this;
 }

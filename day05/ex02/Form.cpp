@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 16:10:55 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/01 14:06:44 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/08 18:45:55 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,25 @@ std::ostream &			operator<<( std::ostream & o, Form const & i )
 	return o;
 }
 
+
+/*
+** --------------------------------- EXCEPTIONS ----------------------------------
+*/
+
+const char* Form::GradeTooHighException::what() const throw()
+{
+	return("Grade too high !");
+}
+
+const char* Form::GradeTooLowException::what() const throw()
+{
+	return("Grade too low !");
+}
+
+const char* Form::FormNotSignedException::what() const throw()
+{
+	return("Form not signed !");
+}
 
 /*
 ** --------------------------------- METHODS ----------------------------------

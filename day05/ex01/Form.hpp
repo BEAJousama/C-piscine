@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 16:10:58 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/26 19:23:24 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/08 18:43:32 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,12 @@ class Form
         class GradeTooHighException : public std::exception
         {
             public:
-                virtual const char* what() const throw()
-                {
-                    return("Grade too high !");
-                }
+                virtual const char* what() const throw();
         };
         class GradeTooLowException : public std::exception
         {
             public:
-                virtual const char* what() const throw()
-                {
-                    return("Grade too low !");
-                }
+                virtual const char* what() const throw();
         };
 		Form();
 		Form( Form const & src );

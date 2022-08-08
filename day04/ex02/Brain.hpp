@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 16:00:41 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/01 16:03:09 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/08 18:15:48 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class Brain
         ~Brain();
         Brain(const Brain &obj);
         Brain& operator=(const Brain &obj);
+        std::string   getIdea(int i) const;
+        void          setIdea(std::string s, int i);    
 };
 
 #endif
