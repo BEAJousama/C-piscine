@@ -55,6 +55,11 @@
         "iomanip": "cpp",
         "fstream": "cpp",
         "sstream": "cpp",
-        "__functional_03": "cpp"
+        "__functional_03": "cpp",
+        "cmath": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "stack": "cpp",
+        "filesystem": "cpp"
     }
 }

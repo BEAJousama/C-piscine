@@ -5,20 +5,20 @@
 #                                                     +:+ +:+         +:+      #
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/06/26 17:33:10 by obeaj             #+#    #+#              #
-#    Updated: 2022/08/04 22:05:10 by obeaj            ###   ########.fr        #
+#    Created: 2022/08/07 14:46:59 by obeaj             #+#    #+#              #
+#    Updated: 2022/08/07 15:54:06 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = a.out
+NAME = identify
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INCLUD = Fixed.hpp
+INCLUD = Identify.h Base.hpp A.hpp B.hpp C.hpp
 
 SRCS =	main.cpp \
-		Fixed.cpp \
+		Identify.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 

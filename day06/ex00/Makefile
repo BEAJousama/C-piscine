@@ -5,20 +5,20 @@
 #                                                     +:+ +:+         +:+      #
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/06/26 17:33:10 by obeaj             #+#    #+#              #
-#    Updated: 2022/08/04 22:05:10 by obeaj            ###   ########.fr        #
+#    Created: 2022/07/20 12:05:21 by obeaj             #+#    #+#              #
+#    Updated: 2022/08/07 11:54:33 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = a.out
+NAME = convert
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INCLUD = Fixed.hpp
+INCLUD = Convert.hpp
 
 SRCS =	main.cpp \
-		Fixed.cpp \
+		Convert.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 

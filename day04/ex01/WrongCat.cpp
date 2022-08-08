@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 14:44:49 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/02 12:40:57 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/04 22:08:27 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ WrongCat& WrongCat::operator=(const WrongCat &obj)
 
 void WrongCat::makeSound() const
 {
-    std::cout<<"Maouuu Maouuu!"<<std::endl;
+    std::cout<<"Wrong : Maouuu Maouuu!"<<std::endl;
 }

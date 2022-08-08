@@ -5,20 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/06/26 17:33:10 by obeaj             #+#    #+#              #
-#    Updated: 2022/08/04 22:05:10 by obeaj            ###   ########.fr        #
+#    Created: 2022/08/08 15:05:55 by obeaj             #+#    #+#              #
+#    Updated: 2022/08/08 15:06:06 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = a.out
+NAME = iter
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INCLUD = Fixed.hpp
+INCLUD = iter.h
 
 SRCS =	main.cpp \
-		Fixed.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 

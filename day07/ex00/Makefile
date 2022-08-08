@@ -5,20 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/06/26 17:33:10 by obeaj             #+#    #+#              #
-#    Updated: 2022/08/04 22:05:10 by obeaj            ###   ########.fr        #
+#    Created: 2022/08/08 14:58:55 by obeaj             #+#    #+#              #
+#    Updated: 2022/08/08 14:59:32 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = a.out
+NAME = templ
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INCLUD = Fixed.hpp
+INCLUD = whatever.h
 
 SRCS =	main.cpp \
-		Fixed.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 

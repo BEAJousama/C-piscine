@@ -6,12 +6,12 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 12:05:14 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/01 13:15:42 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/07 11:58:51 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_H
-#define BUREAUCRAT_H
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
 # include <string>
 # include <iostream>
 # include <stdexcept>
