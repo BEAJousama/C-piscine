@@ -6,41 +6,11 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 15:12:19 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/08 15:36:07 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/09 14:33:17 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iter.h"
-
-template <typename T> void iter(T tab[], int size, void (*func) (T*))
-{
-    for(int i = 0; i < size; i++)
-        func(&tab[i]);
-}
-
-template <typename T>
-void multiply_2(T *a)
-{
-    *a *= 2;
-}
-
-template <typename T>
-void add_2(T *a)
-{
-    *a += 2;
-}
-
-template <typename T>
-void div_2(T *a)
-{
-    *a /= 2;
-}
-
-template <typename T>
-void sub_2(T *a)
-{
-    *a -= 2;
-}
+#include "iter.hpp"
 
 int main()
 {

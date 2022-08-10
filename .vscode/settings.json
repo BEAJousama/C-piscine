@@ -60,6 +60,9 @@
         "__split_buffer": "cpp",
         "deque": "cpp",
         "stack": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "array": "cpp",
+        "list": "cpp",
+        "vector": "cpp"
     }
 }

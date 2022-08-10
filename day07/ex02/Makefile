@@ -6,7 +6,7 @@
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 15:47:53 by obeaj             #+#    #+#              #
-#    Updated: 2022/08/08 17:40:04 by obeaj            ###   ########.fr        #
+#    Updated: 2022/08/09 14:32:36 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = array
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INCLUD = Array.h
+INCLUD = Array.hpp
 
 SRCS =	main.cpp \
 

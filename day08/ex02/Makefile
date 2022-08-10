@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/08/08 15:05:55 by obeaj             #+#    #+#              #
-#    Updated: 2022/08/09 14:33:23 by obeaj            ###   ########.fr        #
+#    Created: 2022/08/10 16:35:02 by obeaj             #+#    #+#              #
+#    Updated: 2022/08/10 16:36:29 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = iter
+NAME = stack
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INCLUD = iter.hpp
+INCLUD = MutantStack.hpp
 
 SRCS =	main.cpp \
 
