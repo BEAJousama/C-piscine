@@ -6,14 +6,14 @@
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/27 21:01:26 by obeaj             #+#    #+#              #
-#    Updated: 2022/07/01 15:49:12 by obeaj            ###   ########.fr        #
+#    Updated: 2022/08/10 19:28:27 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = DiamondTrap
 
 CC= c++
-CC_FLAGS = -Wall -Wextra -Werror -std=c++98
+CC_FLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow
 RM = rm -f
 INCLUD = ClapTrap.hpp ScarvTrap.hpp FragTrap.hpp DiamondTrap.hpp
 

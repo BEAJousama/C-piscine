@@ -22,13 +22,13 @@ FragTrap::FragTrap(const FragTrap &obj)
     *this = obj;
 }
 
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string _name)
 {
-    std::cout << name << " [FragTrap] :¡Hola, me acaban de crear! Gracias a Dios."<< std::endl;
+    std::cout << _name << " [FragTrap] :¡Hola, me acaban de crear! Gracias a Dios."<< std::endl;
     this->AttackDamage = 30;
     this->EnergyPoints = 100;
     this->HitPoints = 100;
-    this->name = name;
+    this->name = _name;
 }
 
 FragTrap::~FragTrap()

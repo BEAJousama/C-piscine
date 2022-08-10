@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 20:57:37 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/02 15:08:58 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/10 19:23:57 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap()
 {
-    std::cout << "An individual got created !"<< std::endl;
+    std::cout << "A ClapTrap child got created !"<< std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &obj)
@@ -22,10 +22,10 @@ ClapTrap::ClapTrap(const ClapTrap &obj)
     *this = obj;
 }
 
-ClapTrap::ClapTrap(std::string name) : HitPoints(10),EnergyPoints(10),AttackDamage(0)
+ClapTrap::ClapTrap(std::string _name) : HitPoints(10),EnergyPoints(10),AttackDamage(0)
 {
-    std::cout << name << " [ClapTrap] : Oh here I am, just get created, thanks god! "<< std::endl;
-    this->name = name;
+    std::cout << _name << " [ClapTrap] : Oh here I am, just get created, thanks god! "<< std::endl;
+    this->name = _name;
 }
 
 ClapTrap::~ClapTrap()
@@ -73,7 +73,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
     if (EnergyPoints == 0 || HitPoints == 0)
     {
-        std::cout << this->name << " [ClapTrap] : Oh my dear god i'm so weak, and i can't get repaired, i'm soo fucked up !"<< std::endl;
+        std::cout << this->name << " [ClapTrap] : Oh my dear god i'm so weak, and i can't get repaired, i'm soo *?*?ed up !"<< std::endl;
         return ;
     }
     std::cout<<this->name<<" [ClapTrap] : I'm getting repaired ! I gained "<< amount << " hit points"<<std::endl;

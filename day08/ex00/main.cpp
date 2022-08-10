@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:00:43 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/09 14:36:05 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/10 18:44:23 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,5 @@ int main()
     it = easyfind<std::list<int> >(lst, 6);
     if (it != -1)
         std::cout << "First occurence at index " << it << std::endl;
+    return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 19:57:36 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/30 17:14:30 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/10 19:26:05 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class DiamondTrap: public FragTrap, public ScarvTrap
         std::string name;
     public:
         DiamondTrap();
-        DiamondTrap(std::string name);
+        DiamondTrap(std::string _name);
         ~DiamondTrap();
         DiamondTrap(const DiamondTrap &obj);
         DiamondTrap& operator=(const DiamondTrap  &obj);

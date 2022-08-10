@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 19:57:39 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/30 22:51:21 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/10 19:25:58 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ DiamondTrap::DiamondTrap(const DiamondTrap &obj)
     *this = obj;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap(std::string _name) : ClapTrap(_name + "_clap_name")
 {
     this->AttackDamage = FragTrap::AttackDamage;
     this->EnergyPoints = ScarvTrap::EnergyPoints;
     this->HitPoints = FragTrap::HitPoints;
-    this->name = name;
+    this->name = _name;
 }
 
 DiamondTrap::~DiamondTrap()

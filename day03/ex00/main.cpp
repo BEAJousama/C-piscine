@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 20:56:43 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/28 15:36:06 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/10 18:38:13 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,12 @@ int main()
     anion.takeDamage(2);
     anion.beRepaired(1);
     anion.attack("Cation");
-    anion.beRepaired(1);
-    anion.beRepaired(1);
-    anion.beRepaired(1);
-    anion.beRepaired(1);
-    anion.beRepaired(1);
-    anion.beRepaired(1);
     anion.attack("Cation");
-    cation.takeDamage(9);
     cation.attack("Anion");
     cation.beRepaired(1);
     cation.beRepaired(1);
     cation.beRepaired(6);
     cation.attack("Anion");
-    anion.takeDamage(8);
     anion.attack("Cation");
     anion.beRepaired(7);
     return 0;
