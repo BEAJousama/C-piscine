@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 19:57:39 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/10 19:25:58 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/11 12:40:55 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ DiamondTrap::DiamondTrap(std::string _name) : ClapTrap(_name + "_clap_name")
     this->EnergyPoints = ScarvTrap::EnergyPoints;
     this->HitPoints = FragTrap::HitPoints;
     this->name = _name;
+    std::cout << this->name << " : [DiamodTrap] created ! !" << std::endl;
 }
 
 DiamondTrap::~DiamondTrap()

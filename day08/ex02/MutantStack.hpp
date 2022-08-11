@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 13:27:22 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/10 16:32:42 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/11 12:19:27 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 #define __MUTANTSTACK__H__
 #include <iostream>
 #include <stack>
-#include <exception>
-
+/*
 template<typename MutantStack>
 class StackIterator
 {
@@ -25,6 +24,7 @@ class StackIterator
         typedef ValueType& ReferenceType;
     public:
         StackIterator(PointerType ptr):m_ptr(ptr){};
+
         StackIterator& operator++()
         {
             m_ptr++;
@@ -32,7 +32,7 @@ class StackIterator
         };
         StackIterator& operator++(int)
         {
-            StackIterator it = *this;
+            StackIterator it = this;
             m_ptr++;
             return it;
         };
@@ -43,57 +43,78 @@ class StackIterator
         };
         StackIterator& operator--(int)
         {
-            StackIterator it = *this;
+            StackIterator it = this;
             m_ptr--;
             return it;
         };
-        bool operator==(StackIterator &it)
+        bool operator==(StackIterator &it) const
         {
             return (this->m_ptr == it.m_ptr);
         };
-        bool operator!=(StackIterator &it)
+        bool operator<=(StackIterator &it) const
+        {
+            return (this->m_ptr <= it.m_ptr);
+        };
+        bool operator>=(StackIterator &it) const 
+        {
+            return (this->m_ptr >= it.m_ptr);
+        };
+        bool operator>(StackIterator &it) const
+        {
+            return (this->m_ptr > it.m_ptr);
+        };
+        bool operator<(StackIterator &it) const
+        {
+            return (this->m_ptr < it.m_ptr);
+        };
+        bool operator!=(StackIterator &it) const
         {
             return !(this->m_ptr == it.m_ptr);
         };
-        
-        ReferenceType operator*()
+        ReferenceType operator*() const
         {
             return *m_ptr;
         };
-        ReferenceType operator[](int i) const
+        ReferenceType operator[](ValueType i) const
         {
             return *(m_ptr + i);
         };
         
-        ReferenceType operator->() const
+        PointerType operator->() const
         {
-            return (m_ptr);
+            return (&(operator*()));
+        };
+        
+        PointerType operator+=(ValueType i) const
+        {
+            return (m_ptr + i);
         };
         
     private:
         PointerType m_ptr;
 };
+*/
 
 template<typename T, typename Container = std::deque<T> >
 class MutantStack : public std::stack<T, Container>
 {
     public:
         typedef T ValueType;
-        typedef StackIterator<MutantStack<T> > iterator;
+        // typedef StackIterator<MutantStack<T> > iterator;
+        typedef typename std::stack<T, Container>::container_type::iterator iterator;
     public:
-        MutantStack():m_ptr(nullptr){};
-        MutantStack(T* ptr):m_ptr(ptr){};
+        MutantStack(){};
+        ~MutantStack(){};
         iterator begin()
         {
-            return iterator(&this->top() - this->size() + 1);
+            // return iterator(&this->top() - this->size() + 1);
+            return std::begin(this->c);
         }
         iterator end()
         {
-            return iterator(&this->top() + 1);
-        }
-    private:
-        T* m_ptr;
-        
+            // return iterator(&this->top() + 1);
+            return std::end(this->c);
+        }       
 };
 
 #endif  //!__MUTANTSTACK__H__

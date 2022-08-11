@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 13:49:20 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/10 16:50:25 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/11 12:18:36 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int main()
     std::cout << it[3] << std::endl;
     
     std::cout << "----------------Stack iterator---------------\n";
-    ++it;
-    --it;
+    it++;
+    it--;
     while (it != ite)
     {
     std::cout << *it << std::endl;
