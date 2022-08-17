@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 14:44:52 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/01 15:52:27 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/17 10:49:17 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class WrongCat : public virtual WrongAnimal
         ~WrongCat();
         WrongCat(const WrongCat &obj);
         WrongCat& operator=(const WrongCat &obj);
-        std::string getType() const;
         void makeSound() const;
         
 };

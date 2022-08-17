@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 14:44:49 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/02 12:31:05 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/17 10:49:12 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,6 @@ WrongCat& WrongCat::operator=(const WrongCat &obj)
         return *this;
     this->type = obj.type;
     return *this;
-}
-
-std::string WrongCat::getType() const
-{
-    return this->type;
 }
 
 void WrongCat::makeSound() const

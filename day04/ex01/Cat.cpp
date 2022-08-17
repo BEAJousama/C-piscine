@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 23:21:14 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/13 17:38:59 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/17 11:25:34 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ Cat::Cat()
     this->brain = new Brain();
 }
 
-Cat::Cat(const Cat &obj) : Animal(obj)
+Cat::Cat(const Cat &obj)
 {
+    std::cout << "Cat copy constructor called\n";
     this->brain = NULL;
     *this = obj;
 }

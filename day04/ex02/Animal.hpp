@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 22:53:49 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/13 18:12:25 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/17 11:29:14 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Animal
         Animal& operator=(const Animal &obj);
         virtual void  makeSound() const = 0;
         std::string getType()const;
-        virtual Brain *getBrain() const = 0;
+        virtual Brain *getBrain() const;
 };
 
 #endif

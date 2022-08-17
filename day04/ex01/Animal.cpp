@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 22:53:43 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/13 16:27:48 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/17 11:01:11 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Animal::Animal()
 {
     std::cout<<"Animal created !"<<std::endl;
+    this->type = "Animal";
 }
 
 Animal::Animal(const Animal &obj)

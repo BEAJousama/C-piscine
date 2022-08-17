@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 14:43:51 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/01 16:51:42 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/17 11:00:37 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 WrongAnimal::WrongAnimal()
 {
     std::cout<<"WrongAnimal created !"<<std::endl;
+    this->type = "WrongAnimal";
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &obj)

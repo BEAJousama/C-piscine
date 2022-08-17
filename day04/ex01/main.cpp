@@ -38,6 +38,8 @@ int main()
     {
         std::cout << cat1.getBrain()->getIdeas(a)<< std::endl;
     }
+    std::cout <<"-------------------------------------------------------------------------------\n";
+
     Cat cat = Cat(cat1);
 
     std::cout <<"------------------------------- Cat <cat> Ideas -------------------------------\n";
@@ -45,6 +47,7 @@ int main()
     {
         std::cout << cat.getBrain()->getIdeas(a)<< std::endl;
     }
+    std::cout <<"-------------------------------------------------------------------------------\n";
 
     Brain br = Brain();
     br.setIdeas("cat idea1", 0);
@@ -60,7 +63,7 @@ int main()
         std::cout << cat.getBrain()->getIdeas(a)<< std::endl;
     }
     
-    std::cout <<"------------------------------- Cat <cat1> Ideas ---------------------------------\n";
+    std::cout <<"------------------------------- Cat <cat1> Ideas ------------------------------\n";
     for (int a = 0; a < 5; a++)
     {
         std::cout << cat1.getBrain()->getIdeas(a)<< std::endl;
@@ -69,8 +72,22 @@ int main()
     std::cout <<"-------------------------------------------------------------------------------\n";
     for(int index = 0; index < 5 ; index++)
         animal[index] = new Dog();
+    std::cout << "---------------------------- Dog sound ---------------------------------------\n";
+    for(int index = 0; index < 5 ; index++)
+    {
+        animal[index]->getType();
+        animal[index]->makeSound();
+    }
+    std::cout <<"-------------------------------------------------------------------------------\n";
     for(int index = 5; index < 10 ; index++)
         animal[index] = new Cat();   
+    std::cout << "---------------------------- Cat sound ---------------------------------------\n";
+    for(int index = 5; index < 10 ; index++)
+    {
+        animal[index]->getType();
+        animal[index]->makeSound();
+    }
+    std::cout <<"------------------------------- Destructors -----------------------------------\n";
     delete j;
     delete i;
     for(int index = 0; index < 10; index++)
