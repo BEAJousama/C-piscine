@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 16:21:43 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/01 12:39:15 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/12 16:29:29 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,12 @@ Point& Point::operator=(const Point& obj)
     return *this;
 }
 
-float Point::get_x() const
+Fixed Point::get_x() const
 {
-    float x = this->x.toFloat();
-    return x;
+    return this->x;
 }
 
-float Point::get_y() const
+Fixed Point::get_y() const
 {
-    float y = this->y.toFloat();
-    return y;
+    return this->y;
 }

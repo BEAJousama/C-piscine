@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 23:22:19 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/02 12:45:08 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/13 18:05:19 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class Dog : public virtual Animal
         Dog(const Dog &obj);
         Dog& operator=(const Dog &obj);
         void makeSound() const;
+        Brain *getBrain() const;
+        void   setBrain(Brain *b);
 };
 
 #endif

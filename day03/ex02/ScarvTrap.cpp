@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 13:23:59 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/10 19:25:05 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/12 18:08:01 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 ScarvTrap::ScarvTrap()
 {
-    std::cout << "ScarvTrap x : Putain ! j'suis né sans nom !"<< std::endl;
 }
 
 ScarvTrap::ScarvTrap(const ScarvTrap &obj)
@@ -22,7 +21,7 @@ ScarvTrap::ScarvTrap(const ScarvTrap &obj)
     *this = obj;
 }
 
-ScarvTrap::ScarvTrap(std::string _name)
+ScarvTrap::ScarvTrap(std::string _name) : ClapTrap(_name)
 {
     std::cout << _name << " [ScarvTrap] : Bonjour, je viens d'etre creé! Dieu merci."<< std::endl;
     this->AttackDamage = 20;

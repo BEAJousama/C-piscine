@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 23:21:40 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/08 18:11:00 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/13 18:05:34 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,19 @@ Dog& Dog::operator=(const Dog &obj)
 void Dog::makeSound() const
 {
     std::cout<<"Hao Hao"<<std::endl;
+}
+
+Brain *Dog::getBrain() const
+{
+    return this->brain;
+}
+
+
+
+void    Dog::setBrain(Brain *b)
+{
+    for (int i = 0; i < 100; i++)
+    {
+        this->brain->setIdeas(b->getIdeas(i), i);
+    }
 }

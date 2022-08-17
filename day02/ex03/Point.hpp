@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 16:21:46 by obeaj             #+#    #+#             */
-/*   Updated: 2022/06/27 20:04:09 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/12 16:29:42 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class Point
         Point(const Point &obj);
         ~Point();
         Point& operator=(const Point  &obj);
-        float get_x() const;
-        float get_y() const;
+        Fixed get_x() const;
+        Fixed get_y() const;
 };
 bool bsp( Point const a, Point const b, Point const c, Point const point);
 #endif

@@ -17,29 +17,12 @@
 #include "WrongCat.hpp"
 #include "Brain.hpp"
 
-// int main()
-// {
-//     const Animal* j = new Dog();
-//     const Animal* i = new Cat();
-//     const Animal *a[10];
-
-//     for(int index = 0; index < 5 ; index++)
-//         a[index] = new Dog();
-//     for(int index = 5; index < 10 ; index++)
-//         a[index] = new Cat();   
-//     delete j;
-//     delete i;
-//     for(int index = 0; index < 10; index++)
-//         delete a[index];
-//     return 0;
-// }
 int main()
 {
     // const Animal* meta = new Animal();
     const WrongAnimal* wrong = new WrongAnimal();
     const Animal* j = new Dog();
     const Animal* i = new Cat();
-    j->
     const WrongAnimal* k = new WrongCat();
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;

@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 16:00:44 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/08 18:17:21 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/13 17:40:49 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,11 @@ Brain& Brain::operator=(const Brain &obj)
     return *this;
 }
 
-std::string   Brain::getIdea(int i) const
+std::string Brain::getIdeas(int index) const
 {
-    return ideas[i];
+    return (this->ideas[index]);
 }
-
-void          Brain::setIdea(std::string s, int i)
+void Brain::setIdeas(std::string str, int index)
 {
-    ideas[i] = s;
+    this->ideas[index] = str;
 }

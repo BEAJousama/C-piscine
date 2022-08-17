@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 22:53:43 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/01 16:51:08 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/13 16:27:48 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,9 @@ void Animal::makeSound() const
 std::string Animal::getType() const
 {
     return this->type;
+}
+
+Brain *Animal::getBrain() const
+{
+    return NULL;
 }

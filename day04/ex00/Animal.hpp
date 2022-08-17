@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 22:53:49 by obeaj             #+#    #+#             */
-/*   Updated: 2022/07/02 12:43:24 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/12 20:40:11 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Animal
         Animal(const Animal &obj);
         Animal& operator=(const Animal &obj);
         virtual void  makeSound()const;
-        virtual std::string getType()const;
+        std::string getType()const;
 };
 
 #endif

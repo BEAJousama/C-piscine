@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 23:21:14 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/08 18:12:43 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/13 18:15:56 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Cat::Cat()
 
 Cat::Cat(const Cat &obj)
 {
-    this->brain = nullptr;
+    this->brain = NULL;
     *this = obj;
 }
 
@@ -37,9 +37,15 @@ Cat& Cat::operator=(const Cat &obj)
         return *this;
     delete brain;
     if (obj.brain)
+    {
         this->brain = new Brain();
+        for (int i = 0; i < 100 ; i++)
+        {
+            this->getBrain()[i] = obj.getBrain()[i];
+        }
+    }
     else
-        this->brain = nullptr;    
+        this->brain = NULL;    
     this->type = obj.type;
     return *this;
 }
@@ -47,4 +53,17 @@ Cat& Cat::operator=(const Cat &obj)
 void Cat::makeSound() const
 {
     std::cout<<"Miao Miao!"<<std::endl;
+}
+
+Brain * Cat::getBrain() const
+{
+    return this->brain;
+}
+
+void    Cat::setBrain(Brain *b)
+{
+    for (int i = 0; i < 100; i++)
+    {
+        this->brain->setIdeas(b->getIdeas(i), i);
+    }
 }
