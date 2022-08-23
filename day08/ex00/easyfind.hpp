@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 12:42:38 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/09 14:36:10 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/23 01:28:38 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iterator>
 #include <list>
 #include <vector>
+#include <algorithm>
 #include <array>
 
 template <typename T> 

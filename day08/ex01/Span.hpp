@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 14:58:56 by obeaj             #+#    #+#             */
-/*   Updated: 2022/08/10 12:44:35 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/08/23 01:32:08 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string>
 # include <exception>
 # include <list>
+# include <algorithm>
 # include <vector>
 
 class Span
