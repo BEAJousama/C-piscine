@@ -6,7 +6,7 @@
 #    By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/20 15:56:46 by obeaj             #+#    #+#              #
-#    Updated: 2023/03/22 09:10:29 by obeaj            ###   ########.fr        #
+#    Updated: 2023/03/28 15:03:20 by obeaj            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,3 +39,5 @@ fclean: clean
 	@echo "[INFO] $(NAME) removed!"
 
 re: fclean all
+
+.PHONY: all clean fclean re

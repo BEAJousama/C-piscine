@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 13:11:31 by obeaj             #+#    #+#             */
-/*   Updated: 2023/03/22 15:35:31 by obeaj            ###   ########.fr       */
+/*   Updated: 2023/03/27 12:50:46 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void RPN::solve(std::string rpnexp)
         {
             if (data.size() < 2) 
             {
-                std::cout << "Error: Invalid expression ." << std::endl;
+                std::cerr << "Error: Invalid expression ." << std::endl;
                 return ;
             }
             int op2 = data.top();
@@ -74,7 +74,7 @@ void RPN::solve(std::string rpnexp)
                 case '/':
                     if (op2 == 0) 
                     {
-                        std::cout << "Error: Division by zero ." << std::endl;
+                        std::cerr << "Error: Division by zero ." << std::endl;
                         return ;
                     }
                     data.push(op1 / op2);
@@ -90,14 +90,14 @@ void RPN::solve(std::string rpnexp)
         }
         else
         {
-            std::cout << "Error: Invalid expression ." << std::endl;
+            std::cerr << "Error: Invalid expression ." << std::endl;
             return ;
         }
         i++;
     }
 
     if (data.size() != 1) {
-        std::cout << "Error: Invalid expression ." << std::endl;
+        std::cerr << "Error: Invalid expression ." << std::endl;
         return ;
     }
 

@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 16:16:22 by obeaj             #+#    #+#             */
-/*   Updated: 2023/03/23 14:32:28 by obeaj            ###   ########.fr       */
+/*   Updated: 2023/03/28 16:01:44 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,14 @@
 # include <iostream>
 # include <vector>
 # include <deque>
+# include <ctime>
+# include <cmath>
 
 class PmergeMe
 {
+    public:
+        typedef std::vector<int>::iterator itvector;
+        typedef std::deque<int>::iterator itdeque;
     public:
         PmergeMe();
         PmergeMe(std::vector<int> args);
@@ -26,6 +31,10 @@ class PmergeMe
         PmergeMe& operator=(PmergeMe const & rhs);
         void sortContainers();
         void setData(std::vector<int> args);
+        void setDataSize(size_t size);
+        
+    private:
+    
         template <typename T>
         void printContainer(T& data)
         {
@@ -33,11 +42,12 @@ class PmergeMe
                 std::cout << data[i] << " ";
             std::cout << std::endl;
         };
+        
         template <typename T>
         T mergeSort(T& data)
         {
-            if (data.size() <= 1)
-                return (data);
+            if (data.size() <= std::sqrt(data_size))
+                return (insertSort(data));
             T v1;
             T v2;
             size_t i = 0;
@@ -55,6 +65,7 @@ class PmergeMe
             v2 = mergeSort(v2);
             return (merge(v1, v2));
         };
+        
         template <typename T> 
         T merge(T& v1, T& v2)
         {
@@ -86,9 +97,9 @@ class PmergeMe
         };
         
         template <typename T>
-        T& insertSort(T & data)
+        T& insertSort(T& data)
         {
-            int i = 1;
+            size_t i = 1;
             while (i < data.size())
             {
                 int j = i;
@@ -101,9 +112,12 @@ class PmergeMe
             }
             return (data);
         }
+
     private:
-        std::vector<int> data1;
-        std::deque<int> data2;
+    
+        std::vector<int>    data1;
+        std::deque<int>     data2;
+        size_t              data_size;
 };
 
 #endif

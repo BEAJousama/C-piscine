@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 15:56:40 by obeaj             #+#    #+#             */
-/*   Updated: 2023/03/22 14:39:40 by obeaj            ###   ########.fr       */
+/*   Updated: 2023/03/27 12:29:36 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,9 +112,7 @@ bool    BitcoinExchange::isNumber(std::string& val, bool isdouble)
     size_t i = 0;
     size_t points = 0;
     
-    if (val.find(",") != std::string::npos)
-        val.replace(val.find(","), 1, ".");
-    if(val[i] == '-' || val[i] == '+')
+    if(val[i] == '+' || (val[i] == '-'))
             i++;
     for (i = i * 1; i < val.length(); i++)
     {
@@ -142,13 +140,12 @@ bool    BitcoinExchange::parseDate(std::string date)
     std::getline(ss, year, '-');
     std::getline(ss, month, '-');
     std::getline(ss, day, '-');
-    std::getline(ss, err, '-');
     year = stringtrim(year);
     month = stringtrim(month);
     day = stringtrim(day);
     
     if(!isNumber(year, false) || !isNumber(month, false) || !isNumber(day, false) 
-        || year.length() != 4 || month.length() != 2 || day.length() != 2 || !err.empty())
+        || year.length() != 4 || month.length() != 2 || day.length() != 2 || date.length() != 10)
     {
         std::cerr << "Error: bad input => " << date << " wrong format !" << std::endl;
         return (false);
@@ -180,17 +177,17 @@ bool    BitcoinExchange::parseValue(std::string value)
 {
     std::string val = stringtrim(value);
     
-    if (!isNumber(val, true))
+    if (!isNumber(val, true) || val.empty())
     {
         std::cerr << "Error: Not a number => " << val << std::endl;
         return (false);
     }
-    if(std::atol(val.c_str()) > 1000)
+    if(std::atof(val.c_str()) > 1000)
     {
         std::cerr << "Error: too large number => " << val << std::endl;
         return (false);
     }
-    if (std::atoi(val.c_str()) < 0)
+    if (std::atof(val.c_str()) < 0)
     {
         std::cerr << "Error: Not a positive number => " << val << std::endl;
         return (false);
@@ -220,8 +217,10 @@ void    BitcoinExchange::exchange(std::string inputfile)
         if(line.empty())
             continue;
         std::stringstream ss(line);
-        std::getline(ss, date, '|');
-        std::getline(ss, value, '|');
+        if(!std::getline(ss, date, '|'))
+            std::cerr << "Error: bad input => " << "empty date!" << std::endl;
+        if (!std::getline(ss, value, '|'))
+            std:: cerr << "Error: bad input => " << "empty value!" << std::endl;
         if (((stringtrim(date) == "date" && stringtrim(value) == "value")) && firstline == 0)
         {
             firstline++;

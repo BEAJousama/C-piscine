@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 15:56:34 by obeaj             #+#    #+#             */
-/*   Updated: 2023/03/22 14:36:54 by obeaj            ###   ########.fr       */
+/*   Updated: 2023/03/28 15:01:33 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,15 @@ class BitcoinExchange
         typedef Map::iterator iterator;
     private:
         Map data;
-        // double result;
     private:
         std::string& rtrim(std::string& str);
         std::string& ltrim(std::string& str);
         std::string& stringtrim(std::string &str);
+        bool    isNumber(std::string& val, bool isdouble);
+        bool    parseDate(std::string date);
+        bool    parseValue(std::string value);
+        Map     getData();
+        double  getRate(std::string date);
     public:
         BitcoinExchange();
         BitcoinExchange(std::string filename);
@@ -41,11 +45,6 @@ class BitcoinExchange
         BitcoinExchange & operator=(BitcoinExchange const & rhs);
         void    setData(std::string filename);
         void    exchange(std::string inputfile);
-        bool    parseDate(std::string date);
-        bool    parseValue(std::string value);
-        bool    isNumber(std::string& val, bool isdouble);
-        Map     getData();
-        double  getRate(std::string date);
 };
 
 #endif

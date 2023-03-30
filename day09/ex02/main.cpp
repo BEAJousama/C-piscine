@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 16:16:17 by obeaj             #+#    #+#             */
-/*   Updated: 2023/03/23 14:32:34 by obeaj            ###   ########.fr       */
+/*   Updated: 2023/03/28 15:51:36 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ bool    isNumber(std::string val)
 {
     size_t i = 0;
     
-    if (val.find(",") != std::string::npos)
-        val.replace(val.find(","), 1, ".");
     if(val[i] == '-' || val[i] == '+')
             i++;
     for (i = i * 1; i < val.length(); i++)
@@ -42,7 +40,9 @@ int main(int ac, char **av)
             return (1);
         }
         ac--;
-    }    
+    }
+    std::reverse(args.begin(), args.end());
     PmergeMe p(args);
+    p.setDataSize(args.size());
     p.sortContainers();
 }
